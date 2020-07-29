@@ -20,6 +20,7 @@ PWAの実装
 GoogleAnalytics
 女優の年齢やバストから絞り込み検索を作成
 オフスクリーン画像の遅延読み込み
+構造化データ[schema.org]
 
 GooglePageSpeedInsights
 71/100
