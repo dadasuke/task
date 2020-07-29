@@ -19,3 +19,7 @@ favicon類の作成
 PWAの実装
 GoogleAnalytics
 女優の年齢やバストから絞り込み検索を作成
+オフスクリーン画像の遅延読み込み
+
+GooglePageSpeedInsights
+71/100
