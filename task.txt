@@ -20,7 +20,7 @@ PWAの実装
 GoogleAnalytics
 女優の年齢やバストから絞り込み検索を作成
 オフスクリーン画像の遅延読み込み
-構造化データ[schema.org]
+構造化データ[schema.org] JSON-LD
 トップに大きめの検索ボックスを設置
 
 GooglePageSpeedInsights
