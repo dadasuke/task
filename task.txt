@@ -25,3 +25,8 @@ GoogleAnalytics
 
 GooglePageSpeedInsights
 71/100
+
+
+2020-07-31 EVENT
+av-jp.com
+avjp.fun
