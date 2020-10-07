@@ -1,27 +1,57 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Daishi</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
 </head>
+
 <body>
   <div id="app">
-    <h1>Hello App!</h1>
-    <p>
-      <!-- ナビゲーションに router-link コンポーネントを使う -->
-      <!-- リンク先を `to` プロパティに指定します -->
-      <!-- デフォルトで `<router-link>` は `<a>` タグとして描画されます -->
-      <router-link to="/foo">Go to Foo</router-link>
-      <router-link to="/bar">Go to Bar</router-link>
-    </p>
-    <!-- ルートアウトレット -->
-    <!-- ルートとマッチしたコンポーネントがここへ描画されます -->
-    <router-view></router-view>
+    <div class="container">
+      <section class="hero is-info">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">
+              <a class="has-text-white" href="toDai.html">Webサイト&アプリ</a>
+            </h1>
+            <h2 class="subtitle">
+              構築に必要になるもの
+            </h2>
+          </div>
+        </div>
+        <div class="hero-foot">
+          <nav class="tabs">
+            <div class="container">
+              <ul>
+                <li class="is-active"><a>Overview</a></li>
+                <li><a>Modifiers</a></li>
+                <li><a>Grid</a></li>
+                <li><a>Elements</a></li>
+                <li><a>Components</a></li>
+                <li><a>Layout</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </section>
+      <p>
+        <!-- ナビゲーションに router-link コンポーネントを使う -->
+        <!-- リンク先を `to` プロパティに指定します -->
+        <!-- デフォルトで `<router-link>` は `<a>` タグとして描画されます -->
+        <router-link to="/foo">Go to Foo</router-link>
+        <router-link to="/bar">Go to Bar</router-link>
+      </p>
+      <!-- ルートアウトレット -->
+      <!-- ルートとマッチしたコンポーネントがここへ描画されます -->
+      <router-view></router-view>
+    </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
   <script src="app.js"></script>
 </body>
+
 </html>
