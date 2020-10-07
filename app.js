@@ -29,15 +29,56 @@ const HowTo = { template: `<div class="content">
         </tr>
       </tbody>
     </table>
-    このようにスマホ本体を使用したデータの利用が必要な場合はアプリでの開発が必須となる。
+    このようにスマホ本体を使用したデータの利用が必要な場合はアプリでの開発が必須である。
   </div>
   <div class="block">
-    例えばLINEのように電話帳に入った情報を使い友達追加をしたい場合は[電話帳]というスマホ固有のデータを利用するためにアプリが必須となる。
+    例えばLINEのように電話帳に入った情報を使い友達追加をしたい場合は[電話帳]というスマホ固有のデータを利用するためにアプリが必須。
   </div>
   <div class="block">
     逆にLINEのようなチャットツールを作成した場合に電話帳からの自動友達追加をせずに、ID検索のみの機能に絞ればWeb版で作ることが可能になる。
   </div>
+  <div class="block">
+    <router-link to="/MeritDemerit" class="button is-info is-rounded is-medium is-fullwidth">
+      メリット＆デメリット
+    </router-link></div>
 </div>` }
+const MeritDemerit = { template: `<div class="content">
+  <h1 class="title">メリット＆デメリット</h1>
+  <div class="block">
+    webサイトとアプリを作る上でのメリット・デメリットは沢山あるので、その中の一部をかいつまんで説明する。
+    <table class="table is-bordered is-fullwidth is-striped mt-5 mb-5">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Web版</th>
+          <th>アプリ版</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>サーバー</td>
+          <td class="has-text-centered">必要</td>
+          <td class="has-text-centered">必要</td>
+        </tr>
+        <tr>
+          <td>開発費用</td>
+          <td class="has-text-centered">必要</td>
+          <td class="has-text-centered">非常に高額</td>
+        </tr>
+        <tr>
+          <td>公開場所</td>
+          <td class="has-text-centered">web上</td>
+          <td class="has-text-centered">アプリストア</td>
+        </tr>
+        <tr>
+          <td>課金<br>システム</td>
+          <td class="has-text-centered">多種あり</td>
+          <td class="has-text-centered">iOS/Androidに<br>合わせた方法</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>`}
 
 // 2. ルートをいくつか定義します
 // 各ルートは 1 つのコンポーネントとマッピングされる必要があります。
@@ -45,7 +86,8 @@ const HowTo = { template: `<div class="content">
 // またはコンポーネントオプションのオブジェクトでも構いません。
 // ネストされたルートに関しては後で説明します
 const routes = [
-  { path: '/', component: HowTo }
+  { path: '/', component: HowTo },
+  { path: '/MeritDemerit', component: MeritDemerit }
 ]
 
 // 3. ルーターインスタンスを作成して、ルートオプションを渡します
