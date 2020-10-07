@@ -1,4 +1,12 @@
 const HowTo = { template: `<div class="content">
+  <article class="message is-danger">
+    <div class="message-header">
+      更新通知
+    </div>
+    <div class="message-body">
+      10/07 サイト公開
+    </div>
+  </article>
   <h1 class="title">はじめに</h1>
   <div class="block">webサイトやアプリを作ってみたいと思っている際にどちらの方が良いのか、費用のことなど色々とわからないことに対してのHowToをまとめてみる。<br></div>
   <div class="block">
@@ -40,7 +48,8 @@ const HowTo = { template: `<div class="content">
   <div class="block">
     <router-link to="/MeritDemerit" class="button is-info is-rounded is-medium is-fullwidth">
       メリット＆デメリット
-    </router-link></div>
+    </router-link>
+  </div>
 </div>` }
 const MeritDemerit = { template: `<div class="content">
   <h1 class="title">メリット＆デメリット</h1>
@@ -63,7 +72,6 @@ const MeritDemerit = { template: `<div class="content">
     <article class="message is-danger mt-4 mb-4">
       <div class="message-header">
         アプリ公開への費用
-        <button class="delete" aria-label="delete"></button>
       </div>
       <div class="message-body">
         iOSの場合は年額99ドル<br>
@@ -88,28 +96,28 @@ const MeritDemerit = { template: `<div class="content">
       webサイトの場合、銀行振込やクレジットカードなど様々な支払い方法を選択することが出来るが決済システム自体は非常にセキュリティ的にナイーブなものな為にPayPalのような代理店を挟む方が開発者も利用者も安心感があると思われる。<br>
     </div>
   </div>
+  <div class="block">
+    <router-link to="/Server" class="button is-info is-rounded is-medium is-fullwidth">
+      サーバーについて
+    </router-link>
+  </div>
+</div>`}
+const server = { template: `<div class="content">
+  <h1 class="title">サーバーについて</h1>
+  <div class="block">
+  </div>
 </div>`}
 
-// 2. ルートをいくつか定義します
-// 各ルートは 1 つのコンポーネントとマッピングされる必要があります。
-// このコンポーネントは実際の `Vue.extend()`、
-// またはコンポーネントオプションのオブジェクトでも構いません。
-// ネストされたルートに関しては後で説明します
 const routes = [
   { path: '/', component: HowTo },
-  { path: '/MeritDemerit', component: MeritDemerit }
+  { path: '/MeritDemerit', component: MeritDemerit },
+  { path: '/Server', component: server }
 ]
 
-// 3. ルーターインスタンスを作成して、ルートオプションを渡します
-// 追加のオプションをここで指定できますが、
-// この例ではシンプルにしましょう
 const router = new VueRouter({
-  routes // `routes: routes` の短縮表記
+  routes
 })
 
-// 4. root となるインスタンスを作成してマウントします
-// アプリケーション全体がルーターを認知できるように、
-// ルーターをインジェクトすることを忘れないでください。
 const app = new Vue({
   router
 }).$mount('#app')
