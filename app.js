@@ -1,5 +1,4 @@
-const Foo = { template: '<div>foo</div>' }
-const Bar = { template: '<div>bar</div>' }
+const HowTo = { template: '<div class="content"><h1>はじめに</h1><div class="block">webサイトやアプリを作ってみたいと思っている</div></div>' }
 
 // 2. ルートをいくつか定義します
 // 各ルートは 1 つのコンポーネントとマッピングされる必要があります。
@@ -7,8 +6,7 @@ const Bar = { template: '<div>bar</div>' }
 // またはコンポーネントオプションのオブジェクトでも構いません。
 // ネストされたルートに関しては後で説明します
 const routes = [
-  { path: '/foo', component: Foo },
-  { path: '/bar', component: Bar }
+  { path: '/', component: HowTo }
 ]
 
 // 3. ルーターインスタンスを作成して、ルートオプションを渡します
