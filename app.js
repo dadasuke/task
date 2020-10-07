@@ -46,37 +46,18 @@ const MeritDemerit = { template: `<div class="content">
   <h1 class="title">メリット＆デメリット</h1>
   <div class="block">
     webサイトとアプリを作る上でのメリット・デメリットは沢山あるので、その中の一部をかいつまんで説明する。
-    <table class="table is-bordered is-fullwidth is-striped mt-5 mb-5">
-      <thead>
-        <tr>
-          <th></th>
-          <th>Web版</th>
-          <th>アプリ版</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>サーバー</td>
-          <td class="has-text-centered">必要</td>
-          <td class="has-text-centered">必要</td>
-        </tr>
-        <tr>
-          <td>開発費用</td>
-          <td class="has-text-centered">必要</td>
-          <td class="has-text-centered">非常に高額</td>
-        </tr>
-        <tr>
-          <td>公開場所</td>
-          <td class="has-text-centered">web上</td>
-          <td class="has-text-centered">アプリストア</td>
-        </tr>
-        <tr>
-          <td>課金<br>システム</td>
-          <td class="has-text-centered">多種あり</td>
-          <td class="has-text-centered">iOS/Androidに<br>合わせた方法</td>
-        </tr>
-      </tbody>
-    </table>
+  </div>
+  <div class="block">
+    <h2 class="title is-5">サーバーについて</h2>
+    webサイト作成においては必ず必要になるサーバー。
+    アプリ版でも基本的には必須になるが、以下のような場合はサーバーが必要無く作成することが可能。
+    <ul>
+      <li>全てがアプリ内で完結し作成者側へ一切のデータを送らない。</li>
+      <li></li>
+    </ul>
+  </div>
+  <div class="block">
+    <h2 class="title is-5">収益化について</h2>
   </div>
 </div>`}
 
