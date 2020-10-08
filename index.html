@@ -25,6 +25,7 @@
   <style>
     .is-pink{ background-color: #f7a4a4; }
     .navbar-item img{ max-height: 52px; }
+    .tabs a{ color: #FFF; }
     @media screen and (min-width: 1024px){
       .navbar-end {
         margin-right: 8px;
@@ -42,7 +43,7 @@
           <nav class="navbar">
             <div class="container">
               <div class="navbar-brand">
-                <a class="navbar-item">
+                <a class="navbar-item" href="/">
                   <img src="assets/images/logo.png" alt="Logo">
                 </a>
                 <span class="navbar-burger burger" data-target="navbarMenuHeroA">
@@ -53,18 +54,18 @@
               </div>
               <div id="navbarMenuHeroA" class="navbar-menu">
                 <div class="navbar-end">
-                  <a class="navbar-item is-active">
+                  <router-link to="/" class="navbar-item">
                     ホーム
-                  </a>
-                  <a class="navbar-item">
+                  </router-link>
+                  <router-link to="/Company" class="navbar-item">
                     会社情報
-                  </a>
-                  <a class="navbar-item">
+                  </router-link>
+                  <router-link to="/Store" class="navbar-item">
                     店舗案内
-                  </a>
-                  <a class="navbar-item">
+                  </router-link>
+                  <router-link to="/Recruit" class="navbar-item">
                     採用情報
-                  </a>
+                  </router-link>
                 </div>
               </div>
             </div>
@@ -74,26 +75,18 @@
         <!-- Hero content: will be in the middle -->
         <div class="hero-body">
           <div class="container has-text-centered">
-            <h1 class="title">
-              ゆめみてる
-            </h1>
-            <h2 class="subtitle">
-              サブタイトル
-            </h2>
+            <router-view></router-view>
           </div>
         </div>
 
-        <!-- Hero footer: will stick at the bottom -->
         <div class="hero-foot">
           <nav class="tabs">
             <div class="container">
               <ul>
-                <li class="is-active"><a>menu</a></li>
-                <li><a>menu</a></li>
-                <li><a>menu</a></li>
-                <li><a>menu</a></li>
-                <li><a>menu</a></li>
-                <li><a>menu</a></li>
+                <li><router-link to="/">Home</router-link></li>
+                <li><router-link to="/Company">Company</router-link></li>
+                <li><router-link to="/Store">Store</router-link></li>
+                <li><router-link to="/Recruit">Recruit</router-link></li>
               </ul>
             </div>
           </nav>
@@ -104,32 +97,21 @@
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+  <script src="index.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-
-// Get all "navbar-burger" elements
-const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
-// Check if there are any navbar burgers
-if ($navbarBurgers.length > 0) {
-
-  // Add a click event on each of them
-  $navbarBurgers.forEach( el => {
-    el.addEventListener('click', () => {
-
-      // Get the target from the "data-target" attribute
-      const target = el.dataset.target;
-      const $target = document.getElementById(target);
-
-      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-      el.classList.toggle('is-active');
-      $target.classList.toggle('is-active');
-
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+      if ($navbarBurgers.length > 0) {
+        $navbarBurgers.forEach( el => {
+          el.addEventListener('click', () => {
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+          });
+        });
+      }
     });
-  });
-}
-
-});
   </script>
 </body>
 
