@@ -1,4 +1,4 @@
-const Home = { template: `<h1 class="title">ゆめみてる</h1><h2 class="subtitle">サブタイトル</h2>` }
+const Home = { template: `<h1 class="title">ゆめみてる</h1>` }
 const Movie = { template: `<div><h1 class="title">動画コンテンツ</h1>
 <div class="block"><video src="assets/movies/Cat.mp4" controls preload="none"></video></div>
 <div class="block"><video src="assets/movies/Bird.mp4" controls preload="none"></video></div>
